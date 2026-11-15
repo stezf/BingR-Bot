@@ -54,6 +54,8 @@ LAST_RUN_FILE = os.path.join(BASE_DIR, "last_run.txt")
 
 thistime = "14:20" # time for execution
 
+
+
 def hasRunToday():
   if not os.path.exists(LAST_RUN_FILE):
     return False
@@ -178,8 +180,7 @@ def loadKeywords(file_path=KEYWORDS_FILE):
   return keywords
 
 KEYWORDS = loadKeywords()
-
-
+    
 # Open the Rewards dashboard & claim available points
 def claimPoints(page, context):
   """Navigates to Rewards dashboard and targets the 'Ready to claim' component directly"""
@@ -259,6 +260,8 @@ def claimPoints(page, context):
   except Exception as e:
     print(f"{ROJO}[ER]: Error claiming accumulated points at {e}{RESET}")
 
+# def ClaimOffers(page, context):
+# """Navigates to Rewards dashboard and targets the.."""
 
 
 # Run the Bing search cycle (mobile device profile)
